@@ -1,4 +1,4 @@
-package com.kamilbaranowski.task_manager;
+package com.kamilbaranowski.taskmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
