@@ -13,17 +13,17 @@
 ## Wykorzystywane technolgie
     - Java 21
     - Maven 3.8+
-    - Baza danych H2 in - memory (ze względy na łatwość uruchomienia)
+    - Baza danych H2 in - memory (ze względu na łatwość uruchomienia)
 
-## 🧠 Decyzje projektowe
+## Decyzje projektowe
 
-- **H2** — lekka baza w pamięci na potrzeby testów
-- **DTO + walidacja** — `@Valid`, `@RequestBody`, `record` DTO
-- **Własne reguły walidacji** w klasie `TaskRules` (np. cykle, parentId, itp.)
-- **Zdarzenia domenowe** — użycie `ApplicationEventPublisher` do publikowania zmian (`TaskCompletedEvent`, `TaskUpdatedEvent`, `TaskDeletedEvent`)
-- **Audyt** — operacje zapisywane do tabeli `audit_log` przez `AuditService`
-- **Specyfikacja (JPA Criteria API)** — filtrowanie po statusie, widoczności i dacie
-- **Eksport do CSV** — przez `CsvExporter`
+    - **H2** — lekka baza w pamięci na potrzeby testów
+    - **DTO + walidacja** — `@Valid`, `@RequestBody`, `record` DTO
+    - **Własne reguły walidacji** w klasie `TaskRules` (np. cykle, parentId, itp.)
+    - **Zdarzenia domenowe** — użycie `ApplicationEventPublisher` do publikowania zmian (`TaskCompletedEvent`, `TaskUpdatedEvent`, `TaskDeletedEvent`)
+    - **Audyt** — operacje zapisywane do tabeli `audit_log` przez `AuditService`
+    - **Specyfikacja (JPA Criteria API)** — filtrowanie po statusie, widoczności i dacie
+    - **Eksport do CSV** — przez `CsvExporter`
 
 ## Sposób uruchomienia
     - mvn spring-boot:run
